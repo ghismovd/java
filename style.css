@@ -10,11 +10,20 @@ body,html {
 }
 
 .keys {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex: 1;
+  felx-wrap: wrap;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   min-height: 100vh;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .key {
@@ -23,6 +32,8 @@ body,html {
   margin: 1rem;
   font-size: 1.5rem;
   padding: 1rem .5rem;
+  -webkit-transition: all .07s ease;
+  -o-transition: all .07s ease;
   transition: all .07s ease;
   width: 10rem;
   text-align: center;
@@ -32,9 +43,12 @@ body,html {
 }
 
 .playing {
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
   border-color: #ffc600;
-  box-shadow: 0 0 1rem #ffc600;
+  -webkit-box-shadow: 0 0 1rem #ffc600;
+          box-shadow: 0 0 1rem #ffc600;
 }
 
 kbd {
@@ -48,12 +62,3 @@ kbd {
   letter-spacing: .1rem;
   color: #ffc600;
 }
-
-
-@media only screen and (max-width: 500px) {
-    .keys {
-        display:flex;
-        min-height: 50vh;
-    }
-}
-Try it Yourself »
